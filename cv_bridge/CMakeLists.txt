@@ -1,4 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
+
+set (CMAKE_CXX_STANDARD 11) 
+
 project(cv_bridge)
 
 find_package(catkin REQUIRED COMPONENTS rosconsole sensor_msgs)
@@ -13,7 +16,7 @@ if(NOT ANDROID)
 else()
 find_package(Boost REQUIRED)
 endif()
-find_package(OpenCV 3 REQUIRED
+find_package(OpenCV 4 REQUIRED
   COMPONENTS
     opencv_core
     opencv_imgproc
